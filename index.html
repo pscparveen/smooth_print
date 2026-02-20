@@ -1,269 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Print | Premium Printing Services</title>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #1a2a44;
-            --white: #ffffff;
-            --light-grey: #f4f4f4;
-            --text-dark: #333333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--white);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: var(--white);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--navy);
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            margin: 0 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--navy);
-        }
-
-        .btn-quote {
-            background: var(--navy);
-            color: white !important;
-            padding: 10px 25px;
-            border-radius: 25px;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .hero-panel {
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 40px;
-            color: white;
-        }
-
-        .hero-content {
-            z-index: 2;
-        }
-
-        .hero-panel::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-panel h1 {
-            font-size: 42px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .btn-sample {
-            background: var(--navy);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        /* Service Grid */
-        .services {
-            padding: 80px 8%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            background: var(--light-grey);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 18px;
-        }
-
-        /* Features Footer */
-        .features-bar {
-            background: var(--navy);
-            color: white;
-            padding: 60px 8%;
-            text-align: center;
-        }
-
-        .features-bar h2 {
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-            font-size: 16px;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .feature-item i {
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
-
-        .feature-item p {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .footer-info {
-            margin-top: 40px;
-            font-size: 12px;
-            opacity: 0.7;
-        }
-
-        @media (max-width: 768px) {
-
-            .hero,
-            .services,
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                height: auto;
-            }
-
-            .hero-panel {
-                height: 300px;
-            }
-        }
-    </style>
+    <title>Smooth Print | Premium Printing Services in India | Business Cards, Brochures, Packaging</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Smooth Print offers premium printing services in India including business cards, brochures, flyers, banners, custom labels, packaging, and large format printing. Get a free quote today!">
+    <meta name="keywords" content="printing services, business cards, brochures, flyers, banners, custom labels, packaging, large format printing, offset printing, digital printing, India">
+    <meta name="author" content="Smooth Print">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
+    <link rel="canonical" href="https://smoothprint.in/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smoothprint.in/">
+    <meta property="og:title" content="Smooth Print | Premium Printing Services in India">
+    <meta property="og:description" content="Premium printing services including business cards, brochures, packaging & more. Get a free quote today!">
+    <meta property="og:image" content="https://smoothprint.in/images/og-image.jpg">
+    <meta property="og:site_name" content="Smooth Print">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://smoothprint.in/">
+    <meta name="twitter:title" content="Smooth Print | Premium Printing Services in India">
+    <meta name="twitter:description" content="Premium printing services including business cards, brochures, packaging & more. Get a free quote today!">
+    <meta name="twitter:image" content="https://smoothprint.in/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23f97316'/%3E%3Ctext x='50' y='65' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3ESP%3C/text%3E%3C/svg%3E">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Schema Markup - Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Smooth Print",
+        "description": "Premium printing services in India including business cards, brochures, flyers, banners, custom labels, packaging, and large format printing.",
+        "url": "https://smoothprint.in",
+        "telephone": "+919999999999",
+        "email": "info@smoothprint.in",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN",
+            "addressRegion": "India"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.6139",
+            "longitude": "77.2090"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-14:00",
+        "priceRange": "$$",
+        "areaServed": "India",
+        "serviceType": ["Digital Printing", "Offset Printing", "Large Format Printing", "Packaging", "Labels"],
+        "sameAs": [
+            "https://www.facebook.com/smoothprint",
+            "https://www.instagram.com/smoothprint",
+            "https://twitter.com/smoothprint"
+        ]
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Smooth Print",
+        "url": "https://smoothprint.in",
+        "logo": "https://smoothprint.in/images/logo.png",
+        "description": "Premium printing services company in India serving businesses since 2015."
+    }
+    </script>
 </head>
-
 <body>
-
-    <nav>
-        <div class="logo">Smooth Print</div>
-        <div class="nav-links">
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact Us</a>
-            <a href="#" class="btn-quote">Get a Quote</a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="printer" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    Smooth Print
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-primary">Get Quote</a>
+                </div>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-panel"
-            style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800');">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
             <div class="hero-content">
-                <h1>Premium Printing.<br>Perfectly Smooth.</h1>
-                <p>Bringing Your Brand to Life with Unrivaled Quality</p>
-                <button class="btn-sample">GET A FREE SAMPLE KIT</button>
+                <div class="hero-text">
+                    <h1>Premium Printing <span>Solutions</span> for Your Business</h1>
+                    <p>Transform your brand with high-quality printing services. From business cards to large format banners, we deliver excellence in every print.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i>
+                            Get Free Quote
+                        </a>
+                        <a href="#portfolio" class="btn btn-white">
+                            <i data-lucide="eye" style="width: 20px; height: 20px;"></i>
+                            View Portfolio
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5000">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50000">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80" alt="Premium printing services" class="hero-image-main" loading="eager">
+                </div>
             </div>
-        </div>
-        <div class="hero-panel"
-            style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800');">
-        </div>
-        <div class="hero-panel"
-            style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800');">
-        </div>
-    </header>
-
-    <section class="services">
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=400"
-                alt="Labels">
-            <h3>Labels</h3>
-        </div>
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1544640855-00635f4c054a?auto=format&fit=crop&q=80&w=400"
-                alt="Brochures">
-            <h3>Brochures</h3>
-        </div>
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1595079676339-1534802ad6cf?auto=format&fit=crop&q=80&w=400"
-                alt="Packaging">
-            <h3>Packaging</h3>
         </div>
     </section>
 
-    <footer class="features-bar">
-        <h2>WHY CHOOSE SMOOTH PRINT?</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <i data-lucide="monitor"></i>
-                <p>Color Accuracy</p>
-            </div>
-            <div class="feature-item">
-                <i data-lucide="leaf"></i>
-                <p>Eco-Friendly Options</p>
-            </div>
-            <div class="feature-item">
-                <i data-lucide="clock"></i>
-                <p>Fast Turnaround</p>
+    <!-- Trust Indicators -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item fade-in">
+                    <div class="trust-icon">
+                        <i data-lucide="award" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span>ISO 9001:2015 Certified</span>
+                </div>
+                <div class="trust-item fade-in stagger-1">
+                    <div class="trust-icon">
+                        <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span>10+ Years Experience</span>
+                </div>
+                <div class="trust-item fade-in stagger-2">
+                    <div class="trust-icon">
+                        <i data-lucide="truck" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span>Pan India Delivery</span>
+                </div>
+                <div class="trust-item fade-in stagger-3">
+                    <div class="trust-icon">
+                        <i data-lucide="refresh-cw" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span>Free Reprints</span>
+                </div>
+                <div class="trust-item fade-in stagger-4">
+                    <div class="trust-icon">
+                        <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span>Fast Turnaround</span>
+                </div>
             </div>
         </div>
-        <div class="footer-info">
-            <p>08 097 423 359 598</p>
-            <p>Smooth Print | contact@smoothprint.com</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Printing Services</h2>
+                <p>Comprehensive printing solutions tailored to meet your business needs with premium quality and competitive pricing.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Business Cards -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="credit-card" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Business Cards</h3>
+                    <p>Make lasting impressions with premium business cards. Matte, glossy, metallic, and custom finishes available.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Brochures -->
+                <div class="service-card fade-in stagger-1">
+                    <div class="service-icon">
+                        <i data-lucide="file-text" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Brochures</h3>
+                    <p>Professional brochures that tell your story. Bi-fold, tri-fold, and custom formats in various paper weights.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Flyers -->
+                <div class="service-card fade-in stagger-2">
+                    <div class="service-icon">
+                        <i data-lucide="newspaper" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Flyers</h3>
+                    <p>Eye-catching flyers for promotions, events, and marketing campaigns. Bulk orders at competitive prices.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Banners -->
+                <div class="service-card fade-in stagger-3">
+                    <div class="service-icon">
+                        <i data-lucide="banner" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Banners</h3>
+                    <p>Vinyl banners, roll-up stands, and pop-up displays for indoor and outdoor advertising.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Custom Labels -->
+                <div class="service-card fade-in stagger-4">
+                    <div class="service-icon">
+                        <i data-lucide="tag" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Custom Labels</h3>
+                    <p>Product labels, bottle labels, and packaging stickers with custom shapes and finishes.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Packaging -->
+                <div class="service-card fade-in stagger-5">
+                    <div class="service-icon">
+                        <i data-lucide="box" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Packaging</h3>
+                    <p>Custom boxes, mailers, and product packaging that elevate your brand identity.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Large Format Printing -->
+                <div class="service-card fade-in stagger-6">
+                    <div class="service-icon">
+                        <i data-lucide="maximize" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Large Format</h3>
+                    <p>Large prints, hoardings, vehicle wraps, and outdoor advertising solutions.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- Stationery -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="pen-tool" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Corporate Stationery</h3>
+                    <p>Letterheads, envelopes, notepads, and complete corporate identity packages.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+                
+                <!-- UV Printing -->
+                <div class="service-card fade-in stagger-1">
+                    <div class="service-icon">
+                        <i data-lucide="sparkles" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>UV Printing</h3>
+                    <p>Premium UV coating and spot UV for enhanced durability and premium finish.</p>
+                    <a href="#contact" class="service-link">Get Quote <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <p>Explore our recent printing projects showcasing quality and creativity across various industries.</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="business-cards">Business Cards</button>
+                <button class="filter-btn" data-filter="brochures">Brochures</button>
+                <button class="filter-btn" data-filter="packaging">Packaging</button>
+                <button class="filter-btn" data-filter="banners">Banners</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" data-category="business-cards">
+                    <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Premium Business Cards" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Business Cards</span>
+                        <h4 class="portfolio-title">Premium Matte Business Cards</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in stagger-1" data-category="brochures">
+                    <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&q=80" alt="Corporate Brochures" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Brochures</span>
+                        <h4 class="portfolio-title">Corporate Brochure Design</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in stagger-2" data-category="packaging">
+                    <img src="https://images.unsplash.com/photo-1607166452427-7e4477c3a9e0?w=600&q=80" alt="Custom Packaging" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Packaging</span>
+                        <h4 class="portfolio-title">Custom Product Box</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="banners">
+                    <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=600&q=80" alt="Event Banners" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Banners</span>
+                        <h4 class="portfolio-title">Event Roll-up Stand</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in stagger-1" data-category="business-cards">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="Product Labels" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Labels</span>
+                        <h4 class="portfolio-title">Custom Product Labels</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in stagger-2" data-category="packaging">
+                    <img src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=600&q=80" alt="Gift Boxes" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Packaging</span>
+                        <h4 class="portfolio-title">Luxury Gift Box</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1557853197-aefb550b6fdc?w=800&q=80" alt="Smooth Print Facility" class="about-image-main" loading="lazy">
+                    <div class="about-image-badge">
+                        <div class="years">10+</div>
+                        <div class="label">Years</div>
+                    </div>
+                </div>
+                
+                <div class="about-text fade-in stagger-1">
+                    <h2>About Smooth Print</h2>
+                    <p class="lead">Since 2015, Smooth Print has been a trusted name in premium printing services across India.</p>
+                    <p>We specialize in delivering high-quality printing solutions for businesses of all sizes. Our state-of-the-art facility combines advanced printing technology with skilled craftsmanship to bring your vision to life.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+                            </div>
+                            <span>Quality Guarantee</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+                            </div>
+                            <span>Competitive Pricing</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+                            </div>
+                            <span>Fast Turnaround</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+                            </div>
+                            <span>Design Support</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-secondary">Work With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by hundreds of businesses across India.</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                    </div>
+                    <p class="testimonial-text">"Smooth Print transformed our brand identity with stunning business cards and marketing materials. The quality exceeded our expectations!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RK</div>
+                        <div class="testimonial-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span>CEO, TechVentures India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in stagger-1">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent printing services! They delivered our wedding invitation suites on time and the quality was impeccable. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SP</div>
+                        <div class="testimonial-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Event Manager</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in stagger-2">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                        <i data-lucide="star" style="width: 18px; height: 18px; fill: #f97316;"></i>
+                    </div>
+                    <p class="testimonial-text">"We've been working with Smooth Print for 5 years now. Their consistency in quality and competitive pricing makes them our go-to printer."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AM</div>
+                        <div class="testimonial-info">
+                            <h4>Ajay Mehta</h4>
+                            <span>Marketing Director, RetailMax</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to start your printing project? Contact us for a free quote. We'd love to hear from you!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="phone" style="width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Phone</h4>
+                                <p>+91 99999 99999</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Email</h4>
+                                <p>info@smoothprint.in</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Location</h4>
+                                <p>India (Pan India Service)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Business Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                                <p>Sat: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Request a Quote</h3>
+                    <form id="quoteForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Required *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="business-cards">Business Cards</option>
+                                    <option value="brochures">Brochures</option>
+                                    <option value="flyers">Flyers</option>
+                                    <option value="banners">Banners</option>
+                                    <option value="labels">Custom Labels</option>
+                                    <option value="packaging">Packaging</option>
+                                    <option value="large-format">Large Format</option>
+                                    <option value="stationery">Corporate Stationery</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project requirements, quantity, paper type, size, etc."></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                    <i data-lucide="send" style="width: 20px; height: 20px;"></i>
+                                    Submit Quote Request
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i data-lucide="printer" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        Smooth Print
+                    </a>
+                    <p>Premium printing services in India. Transform your brand with high-quality printing solutions since 2015.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="#services">Business Cards</a>
+                        <a href="#services">Brochures</a>
+                        <a href="#services">Flyers</a>
+                        <a href="#services">Banners</a>
+                        <a href="#services">Packaging</a>
+                        <a href="#services">Labels</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="#about">About Us</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Careers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#">FAQs</a>
+                        <a href="#">Shipping Policy</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smooth Print. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+        <i data-lucide="message-circle" style="width: 28px; height: 28px; color: white;"></i>
+    </a>
+
+    <!-- Scripts -->
     <script>
+        // Initialize Lucide Icons
         lucide.createIcons();
+        
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Portfolio Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.stat-number');
+        let hasAnimated = false;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = parseInt(counter.dataset.count);
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString() + '+';
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+        
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger counter animation when stats come into view
+                    if (entry.target.classList.contains('stat-number') && !hasAnimated) {
+                        hasAnimated = true;
+                        animateCounters();
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Form Submission
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! We will get back to you within 24 hours.');
+            this.reset();
+        });
+        
+        // Active Navigation Highlight
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
-
 </html>
